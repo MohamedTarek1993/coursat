@@ -1118,7 +1118,6 @@ input {
 // app section
 .app_section {
   position: relative;
-
   .app {
     background-image: url(../image/app-back.png);
     background-position: center;
@@ -1131,9 +1130,9 @@ input {
     .app_image {
       position: absolute;
       left: -28px;
-      bottom: -78px;
-      height: 600px;
-      width: 47%;
+      bottom: -107px;
+      height: 636px;
+      width: 49%;
     }
 
     h4 {
@@ -2094,23 +2093,39 @@ main.coll {
 
   .pagination {
     .page-item {
+      border: 1px solid var(--color-secound);
+      background-color: transparent;
+       border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline-end: 2%;
+      width: 40px;
+      height: 40px;
+      transition: .3s all ease-in-out;
+      &:hover{
+        background-color: var(--color-secound);
+        .page-link{
+          color: var(--color-white);
+        }
+      }
+
       .page-link {
-        color: var(--color-text);
+        color: var(--color-secound);
         font-family: 'bold';
-        background-color: white;
         border-color: transparent;
-        font-size: 1.3rem;
+        font-size: 1rem;
+        padding: 5px;
+        background-color: transparent;
+        transition: .3s all ease-in-out;
       }
     }
 
     .page-item.active {
+      background-color: var(--color-secound);
       .page-link {
-        color: var(--color-primary);
-        background-color: white;
-        font-family: 'bold';
-        border-color: transparent;
-        text-decoration: underline;
-        font-size: 1.3rem;
+        color: var(--color-white);
+      
       }
     }
   }
